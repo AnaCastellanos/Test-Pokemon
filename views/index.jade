@@ -1,12 +1,21 @@
-html
+doctype hml
+html(lang ="es")
 	head 
 		title	Consumo API pokemon
+
+		meta(charset = "utf-8")
 	body
-		for(action="/", method="POST")
-			input(type="text" placeholder="http://pokeapi.co/api/v2/" disable ="true")
+		for(action="/result-" method = "POST")
+			label(type ="text" name="url" placeholder="http://pokeapi.co/api/v2/" disable ="true") http://pokeapi.co/api/v2/
+			select(id="endpoints", name="endpoints")
+					option(value="pokemon/") pokemon/
+					option(value="berry/") berry/
+					option(value="iberry-firmness/") iberry-firmness/
+					option(value="berry-flavor/") berry-flavor/
+					option(value="contest-type/") contest-type/
+					option(value="contest-effect/") contest-effect/
+					option(value="super-contest-effect/") super-contest-effect/
+					option(value="encounter-method/") encounter-method/		
+			input(type ="text"  name="name" placeholder="name - number")
 	p
-			input(type="text" placeholder="pokemon/")
-	p
-			input(type="text" placeholder="name - number")
-	p
-			input(type="submit" name="Query")
+			input(type ="submit" name="Query")

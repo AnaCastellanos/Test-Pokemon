@@ -2,7 +2,7 @@ const endpoints = new Array('pokemon','berry','iberry-firmness','berry-flavor','
 const fs = require('fs')
 const request = require('request')
 const url = 'http://pokeapi.co/api/v2'
-
+ 
 
 arrPokemon = () => {
 	return new Promise(function(resolve,reject){
@@ -25,7 +25,7 @@ arrPokemon = () => {
 	})
 }
 
-pokemon = (endpoint,name)=>{
+pokemon = (endpoint="pokemon/",name="1")=>{
 
 	return new Promise(function(resolve,reject){
 		console.log(`${url}/${endpoint}/${name}`)
